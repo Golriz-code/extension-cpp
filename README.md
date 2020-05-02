@@ -1,3 +1,7 @@
+# Demonstrating Ninja Issue
+
+---------------------------------------------
+
 # C++/CUDA Extensions in PyTorch
 
 An example of writing a C++ extension for PyTorch. See

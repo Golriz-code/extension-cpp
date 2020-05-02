@@ -9,6 +9,7 @@ setup(
             'lltm_cuda_kernel.cu',
         ]),
     ],
+    include_dirs=['includes'],
     cmdclass={
         'build_ext': BuildExtension
     })
