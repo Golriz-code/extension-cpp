@@ -1,15 +1,17 @@
 from setuptools import setup
-from torch.utils.cpp_extension import BuildExtension, CUDAExtension
+from torch.utils.cpp_extension import BuildExtension, CppExtension
 
 setup(
     name='lltm_cuda',
     ext_modules=[
-        CUDAExtension('lltm_cuda', [
-            'lltm_cuda.cpp',
-            'lltm_cuda_kernel.cu',
-        ]),
+        CppExtension(
+            'lltm_cuda',
+            [
+                'lltm_cuda.cpp',
+            ],
+            include_dirs=['/abs/path/to/includes'],
+        ),
     ],
-    include_dirs=['includes'],
     cmdclass={
         'build_ext': BuildExtension
     })
